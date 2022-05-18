@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarklets</title>
+  <style>
+    body {
+      background: black;
+      color: darkgoldenrod;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    h1, h2 {
+      color: darkcyan;
+      font-weight: normal;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+      color: #e7148c;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bookmarklets</h1>
+  <p>Drag links to the bookmarks bar to "install" them.</p>
+  <h2>Video Playback Rate</h2>
+  <p>Speed up playback rate of the first video tag in the document.</p>
+  <ul>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1);'>1</a></li>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1.2);'>1.2</a></li>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1.3);'>1.3</a></li>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1.4);'>1.4</a></li>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1.5);'>1.5</a></li>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1.7);'>1.7</a></li>
+    <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(2);'>2</a></li>
+  </ul>
+</body>
+</html>
