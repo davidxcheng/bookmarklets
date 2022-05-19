@@ -12,6 +12,11 @@
       font-family: 'Courier New', Courier, monospace;
     }
 
+    main {
+      margin: 8px auto;
+      max-width: 780px;
+    }
+
     h1, h2 {
       color: darkcyan;
       font-weight: normal;
@@ -24,6 +29,7 @@
   </style>
 </head>
 <body>
+<main>
   <h1>Bookmarklets</h1>
   <p>Drag links to the bookmarks bar to "install" them.</p>
   <h2>Video Playback Rate</h2>
@@ -37,5 +43,10 @@
     <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(1.7);'>1.7</a></li>
     <li><a href='javascript:(rate => document.querySelector("video").playbackRate = rate)(2);'>2</a></li>
   </ul>
+
+  <h2>Strikethrough Toggler</h2>
+  <p>Click on an element to apply <code>text-decoration: line-through</code>. Real life use case: every week I had to manually deploy a, sometimes long, list of services and the list was posted as a wiki page.</p>
+  <a href="javascript:(() => { document.head.insertAdjacentHTML('beforeend', '<style>.struck {text-decoration: line-through}</style>'); document.addEventListener('click', e => e.target.classList.toggle('struck')); })()">Strike through</a>
+</main>
 </body>
 </html>
